@@ -77,10 +77,16 @@ last_values = [arr[-1] for arr in global_metrics_means]
 # Create an array of x values corresponding to the row number of the list
 x_values = np.arange(len(global_metrics_means))
 
-# Create a plot with x as row number and y as the last value in each array
-plt.plot(x_values, last_values)
-plt.xlabel('Power')
-plt.ylabel('Loss')
-plt.show()
+try:
+    # Create a plot with x as row number and y as the last value in each array
+    plt.plot(x_values, last_values)
+    plt.xlabel('Power')
+    plt.ylabel('Loss')
+    plt.show()
+    plt.close() 
+except Exception as e:
+    print(f"Exception occurred: {e}")
+finally:
+    print("Script has exited")
 
 sys.exit()

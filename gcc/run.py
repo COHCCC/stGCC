@@ -63,7 +63,7 @@ pred_label = pred_list[-1].numpy()
 df = pd.DataFrame(pred_label)
 print(df)
 
-path = "/Users/ninasong/Desktop/spatialProject/literature_model/graph_convolutional_clustering/unsupervised-GCN/"
+path = "/Users/ninasong/Desktop/spatialProject/literature_model/graph_convolutional_clustering/unsupervised-GCN/FFD1/annotation/"
 df.to_csv((os.path.join(path, "pred_label_only.csv")), index=False)
 
 #The visualization of predicted versus true labels can be directly viewed in the terminal by following -
