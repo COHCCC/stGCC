@@ -82,6 +82,12 @@ To run the model on Citeseer for power `p=5` and have the average execution time
 python gcc/run.py --dataset=citeseer --power 5
 ```
 
+*Note: sometimes running these two command line in jupyter notebook will give you `ModuleNotFoundError: No module named 'gcc'` error, it is a better idea to run them in terminal.
+
+If there still gives error messge, try the following:
+
+```export PYTHONPATH="${PYTHONPATH}:/Users/ninasong/Desktop/spatialProject/literature_model/graph_convolutional_clustering/unsupervised-GCN"``` (change the path to your working directory)
+
 For more details of this model, please find the WSDM '22 paper [*Efficient Graph Convolution for Joint Node Representation Learning and Clustering*](https://dl.acm.org/doi/10.1145/3488560.3498533).[*github*](https://github.com/chakib401/graph_convolutional_clustering)
 
 ### 3. Data prepration
@@ -92,7 +98,15 @@ Its the time to generate our own data and use it as the input for this unsupervi
 
 For the step-by-step tutorial with explanation, please refer to: [*Jupyter Notebook of the tutorial*](https://github.com/USCDTG/unsupervised-GCN/blob/main/tutorial/Adj_feature_preparation.ipynb)
 
+*Note: Files needed to generate `FFD1.mat` are located in `FFD1` folder, make sure when running the notbook, the path to required files are correct.
 
+Once get the file FFD1.mat using the tutorial (make sure it is stored in `data` subdirectory), run the following command line in the terminal:
+
+```python gcc/tune_power.py --dataset=FFD1 --max_power=30```
+
+```python gcc/tune_power.py --dataset FFD1 --max_power 10```
+
+Output file will be `pred_label_only.csv` in `/annotation` folder. For downstream visulation, please 
 
 ### 4. Citation
 
