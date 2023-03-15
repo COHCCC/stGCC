@@ -8,7 +8,7 @@
 2. [Run experiments](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#2-run-experiments)
 
 3. [Data preparation](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#3-data-preparation)
-4. [Execution and Visulization](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#4-exection-and-visulization)
+4. [Execution and Visulization](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#4-execution-and-visulization)
 
 5. [Citation](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#5-citation)
 
@@ -97,7 +97,7 @@ If the error persist, we suggest trying the following:
 
 For more details of this model, please find the WSDM '22 paper [*Efficient Graph Convolution for Joint Node Representation Learning and Clustering*](https://dl.acm.org/doi/10.1145/3488560.3498533).[*github*](https://github.com/chakib401/graph_convolutional_clustering)
 
-### 3. Data prepration
+### 3. Data preparation
 
 <img src="./plot/schematic.png" width="650">
 
