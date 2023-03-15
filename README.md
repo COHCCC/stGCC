@@ -68,7 +68,7 @@ For `run.py`
 
 To adaptively tune the power on Citeseer use
 
-<img src="./Algorithm_2.png" width="300">
+<img src="./plot/Algorithm_2.png" width="300">
 
 ```bash
 python gcc/tune_power.py --dataset=citeseer
@@ -76,7 +76,7 @@ python gcc/tune_power.py --dataset=citeseer
 
 To run the model on Citeseer for power `p=5` and have the average execution time
 
-<img src="./Algorithm_1.png" width="320">
+<img src="./plot/Algorithm_1.png" width="320">
 
 ```bash
 python gcc/run.py --dataset=citeseer --power 5
@@ -92,7 +92,7 @@ For more details of this model, please find the WSDM '22 paper [*Efficient Graph
 
 ### 3. Data prepration
 
-<img src="./schematic.png" width="650">
+<img src="./plot/schematic.png" width="650">
 
 Its the time to generate our own data and use it as the input for this unsupervised DCN model :>
 
@@ -100,13 +100,13 @@ For the step-by-step tutorial with explanation, please refer to: [*Jupyter Noteb
 
 *Note: Files needed to generate `FFD1.mat` are located in `FFD1` folder, make sure when running the notbook, the path to required files are correct.
 
-Once get the file FFD1.mat using the tutorial (make sure it is stored in `data` subdirectory), run the following command line in the terminal:
+Once get the file `FFD1.mat` using the tutorial (make sure it is stored in `data` subdirectory), run the following command line in the terminal:
 
 ```python gcc/tune_power.py --dataset=FFD1 --max_power=30```
 
 ```python gcc/tune_power.py --dataset FFD1 --max_power 10```
 
-Output file will be `pred_label_only.csv` in `/annotation` folder. For downstream visulation, please 
+Output file will be `pred_label_only.csv` in `/annotation` folder. The post processing section will combine the predict label with barcode, form the similar format of `tissue_position.csv`, thereby enabling its future utilization in visualizations via R studio. For downstream visulation, please refer to: 
 
 ### 4. Citation
 
