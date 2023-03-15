@@ -126,7 +126,9 @@ Once get the file `FFD1.mat` using the tutorial (make sure it is stored in `data
 
 Output file will be `pred_label_only.csv` in `/annotation` folder. The post processing section will combine the predict label with barcode, form the similar format of `tissue_position.csv`, thereby enabling its future utilization in visualizations via R studio. For downstream visulation, please refer to: [*R script: visualizing_GCN-clustering.R*](https://github.com/USCDTG/unsupervised-GCN/blob/main/tutorial/visualizing_GCN-clustering.R)
 
+FFD1 GCN trial 1 -  label visulation (working on improving the model)
 
+<img src="./plot/visulization_FFD1_trial_1.png" width="500">
 
 ### 5. Citation
 
