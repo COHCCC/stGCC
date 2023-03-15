@@ -3,13 +3,14 @@
 
 ## Outline
 
-1. Installation
+1. [Installation](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#1-installation)
 
 2. Run experiments
 
-3. Data preparation
+3. Data preparation 
+4. Execution and Visulization
 
-4. Citation
+5. Citation
 
 ### 1. Installation
 
@@ -53,19 +54,6 @@ conda install -c bioconda scanpy
 
 #### Example 
 
-#### Parameter list
-
-For `run.py`
-
-| Parameter    | Type    | Default | Description                                     |
-| ------------ | ------- | ------- | ----------------------------------------------- |
-| `dataset`    | string  | `cora`  | Name of the graph dataset (`citeseer`, `FFD1`). |
-| `power`      | integer | `5`     | First power to test.                            |
-| `runs`       | integer | `20`    | Number of runs per power.                       |
-| `n_clusters` | integer | `0`     | Number of clusters (`0` for ground truth).      |
-| `max_iter`   | integer | `30`    | Number of iterations of the algorithm.          |
-| `tol`        | float   | `10e-7` | Tolerance threshold of convergence.             |
-
 To adaptively tune the power on Citeseer use
 
 <img src="./plot/Algorithm_2.png" width="300">
@@ -73,6 +61,8 @@ To adaptively tune the power on Citeseer use
 ```bash
 python gcc/tune_power.py --dataset=citeseer
 ```
+
+
 
 To run the model on Citeseer for power `p=5` and have the average execution time
 
@@ -82,9 +72,26 @@ To run the model on Citeseer for power `p=5` and have the average execution time
 python gcc/run.py --dataset=citeseer --power 5
 ```
 
-*Note: sometimes running these two command line in jupyter notebook will give you `ModuleNotFoundError: No module named 'gcc'` error, it is a better idea to run them in terminal.
+#### Parameter list
 
-If there still gives error messge, try the following:
+For `run.py`
+
+| Parameter    | Type    | Default    | Description                                     |
+| ------------ | ------- | ---------- | ----------------------------------------------- |
+| `dataset`    | string  | `citeseer` | Name of the graph dataset (`citeseer`, `FFD1`). |
+| `power`      | integer | `5`        | First power to test.                            |
+| `runs`       | integer | `20`       | Number of runs per power.                       |
+| `n_clusters` | integer | `0`        | Number of clusters (`0` for ground truth).      |
+| `max_iter`   | integer | `30`       | Number of iterations of the algorithm.          |
+| `tol`        | float   | `10e-7`    | Tolerance threshold of convergence.             |
+
+
+
+Example output looks like: [*run example results*](https://github.com/USCDTG/unsupervised-GCN/blob/main/tutorial/run_example.ipynb)
+
+*Note: Please note that occasionally running these two command lines within a Jupyter notebook environment may result in a `ModuleNotFoundError: No module named 'gcc'` error. In such cases, it is recommended to execute them within a terminal instead. 
+
+If the error persist, we suggest trying the following:
 
 ```export PYTHONPATH="${PYTHONPATH}:/Users/ninasong/Desktop/spatialProject/literature_model/graph_convolutional_clustering/unsupervised-GCN"``` (change the path to your working directory)
 
@@ -96,9 +103,13 @@ For more details of this model, please find the WSDM '22 paper [*Efficient Graph
 
 Its the time to generate our own data and use it as the input for this unsupervised DCN model :>
 
-For the step-by-step tutorial with explanation, please refer to: [*Jupyter Notebook of the tutorial*](https://github.com/USCDTG/unsupervised-GCN/blob/main/tutorial/Adj_feature_preparation.ipynb)
+For the step-by-step tutorial with explanation, please refer to: [*Jupyter Notebook of the tutorial: data preparation*](https://github.com/USCDTG/unsupervised-GCN/blob/main/tutorial/Adj_feature_preparation.ipynb)
 
 *Note: Files needed to generate `FFD1.mat` are located in `FFD1` folder, make sure when running the notbook, the path to required files are correct.
+
+
+
+### 4: Execution and Visulization
 
 Once get the file `FFD1.mat` using the tutorial (make sure it is stored in `data` subdirectory), run the following command line in the terminal:
 
@@ -106,9 +117,11 @@ Once get the file `FFD1.mat` using the tutorial (make sure it is stored in `data
 
 ```python gcc/tune_power.py --dataset FFD1 --max_power 10```
 
-Output file will be `pred_label_only.csv` in `/annotation` folder. The post processing section will combine the predict label with barcode, form the similar format of `tissue_position.csv`, thereby enabling its future utilization in visualizations via R studio. For downstream visulation, please refer to: 
+Output file will be `pred_label_only.csv` in `/annotation` folder. The post processing section will combine the predict label with barcode, form the similar format of `tissue_position.csv`, thereby enabling its future utilization in visualizations via R studio. For downstream visulation, please refer to: [*R script: visualizing_GCN-clustering.R*](https://github.com/USCDTG/unsupervised-GCN/blob/main/tutorial/visualizing_GCN-clustering.R)
 
-### 4. Citation
+
+
+### 5. Citation
 
 ```BibTeX
 @inproceedings{fettal2022efficient,
