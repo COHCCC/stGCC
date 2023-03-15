@@ -5,12 +5,12 @@
 
 1. [Installation](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#1-installation)
 
-2. Run experiments
+2. [Run experiments](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#2-run-experiments)
 
-3. Data preparation 
-4. Execution and Visulization
+3. [Data preparation](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#3-data-preparation)
+4. [Execution and Visulization](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#4-exection-and-visulization)
 
-5. Citation
+5. [Citation](https://github.com/USCDTG/unsupervised-GCN/blob/main/README.md#5-citation)
 
 ### 1. Installation
 
