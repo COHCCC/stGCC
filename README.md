@@ -63,7 +63,7 @@ conda install -c bioconda scanpy
 
 To adaptively tune the power on Citeseer use
 
-<img src="./plot/Algorithm_2.png" width="300">
+<img src="./plot/Algorithm_2.png" width= "400">
 
 ```bash
 python gcc/tune_power.py --dataset=citeseer
@@ -128,7 +128,9 @@ Output file will be `pred_label_only.csv` in `/annotation` folder. The post proc
 
 FFD1 GCN trial 1 -  label visulation (working on improving the model)
 
-<img src="./plot/visulization_FFD1_trial_1.png" width="500">
+<img src="./plot/visulization_trial_2.png" width="500">
+
+
 
 ### 5. Citation
 
