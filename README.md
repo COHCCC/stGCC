@@ -1,5 +1,5 @@
 
-# Unsupervised GCN Tutorial
+# Unsupervised graph_convolutional_clustering on ST data Tutorial
 
 ## Outline
 
