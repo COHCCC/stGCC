@@ -18,7 +18,7 @@ Download the package from Github and install it locally:
 
 ```bash
  git clone https://github.com/COHCCC/stGCC
- cd unsupervised-GCN
+ cd stGCC
 ```
 
 Some of packages used in this tutorial might conflict with your currient enviornment, consider installing Anaconda. After installing Anaconda, you can create a new environment, for example, git_gnn (you can change to any name you like).
