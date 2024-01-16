@@ -17,7 +17,7 @@
 Download the package from Github and install it locally:
 
 ```bash
- git clone https://github.com/USCDTG/unsupervised-GCN
+ git clone https://github.com/COHCCC/unsupervised-GCN
  cd unsupervised-GCN
 ```
 
